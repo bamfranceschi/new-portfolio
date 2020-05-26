@@ -1,17 +1,19 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-import Header from "./components/Header";
-import Nav from "./components/Nav";
+import Header from "./components/Header.jsx";
 import "./App.css";
 import About from "./pages/About";
+import Banner from "./components/Banner";
+import ProjectCont from "./components/ProjectCont";
 
 function App() {
   return (
     <Router>
       <div>
         <Header />
-        <Nav />
+        <Banner />
+        <ProjectCont />
       </div>
       <Switch>
         <Route exact path="/" />

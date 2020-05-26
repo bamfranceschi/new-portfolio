@@ -1,0 +1,43 @@
+[
+  {
+    "name": "Connect Our Kids - Mobile App",
+    "description": "Connect Our Kids helps social workers locate relatives of foster children, with the aim of finding a permanent home for these children. The mobile app is designed to mirror the web app functionality, and allows social workers to manage cases and log information about both the children and relatives.",
+    "image": "",
+    "tech_stack": ["ReactNative", "Typescript", "Redux", "SASS"],
+    "github": "https://github.com/Lambda-School-Labs/connect-our-kids-fe",
+    "deploy": "https://apps.apple.com/us/app/connect-our-kids/id1471038972"
+  },
+  {
+    "name": "Kansha - Web App",
+    "description": "Kansha makes it easy to recognize hardworking employees and peers with rewards and personalized messages.",
+    "image": "https://kansharewards.com/static/media/people-jumping.12fa9b72.jpeg",
+    "tech_stack": [
+      "ReactJS",
+      "Axios",
+      "SASS",
+      "PostgreSQL",
+      "NodeJS",
+      "Express"
+    ],
+    "github": [
+      "https://github.com/Lambda-School-Labs/kansha-fe",
+      "https://github.com/Lambda-School-Labs/kansha-be"
+    ],
+    "deploy": "https://kansharewards.com/"
+  },
+  {
+    "name": "Replate - Web App",
+    "description": "Replate reduces the amount of food waste by connecting food bank volunteers with local restaurants and grocers. Volunteers can accept pickup orders of leftover food to deliver to food banks.",
+    "image": "",
+    "tech_stack": [
+      "ReactJS",
+      "Axios",
+      "Styled Components",
+      "PostgreSQL",
+      "NodeJS",
+      "Express"
+    ],
+    "github": "https://github.com/Replate1/Back-End",
+    "deploy": "https://replate-seven.now.sh/#/react-auth-ui/sign-in"
+  }
+]
