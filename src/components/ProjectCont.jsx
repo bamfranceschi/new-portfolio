@@ -1,10 +1,24 @@
 import React from "react";
 import ProjCard from "./ProjCard";
 import ProjectData from "../data/projects.json";
+import styled from "styled-components";
+
+const ProjParent = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
+
+const Title = styled.h1`
+  font-size: 4rem;
+  display: flex;
+  justify-content: center;
+`;
 
 const ProjectCont = () => {
   return (
-    <div>
+    <ProjParent>
+      <Title>Projects</Title>
       {ProjectData.map((p) => (
         <ProjCard
           name={p.name}
@@ -15,7 +29,7 @@ const ProjectCont = () => {
           deploy={p.deploy}
         />
       ))}
-    </div>
+    </ProjParent>
   );
 };
 

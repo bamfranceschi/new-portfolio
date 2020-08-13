@@ -4,7 +4,6 @@ import { DiJavascript1 } from "react-icons/di";
 import { DiPython } from "react-icons/di";
 import { DiNodejsSmall } from "react-icons/di";
 import { DiPostgresql } from "react-icons/di";
-import { DiDjango } from "react-icons/di";
 import { DiReact } from "react-icons/di";
 import { DiHtml5 } from "react-icons/di";
 import { DiSass } from "react-icons/di";
@@ -31,7 +30,6 @@ const Banner = () => {
       <DiPython />
       <DiNodejsSmall />
       <DiPostgresql />
-      <DiDjango />
       <DiReact />
       <DiHtml5 />
       <DiSass />
