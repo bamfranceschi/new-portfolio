@@ -7,12 +7,13 @@ const ProjParent = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 48%;
 `;
 
 const Title = styled.h1`
   font-size: 4rem;
   display: flex;
-  justify-content: center;
+  margin: 3rem;
 `;
 
 const ProjectCont = () => {

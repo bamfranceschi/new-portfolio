@@ -1,6 +1,18 @@
 import React from "react";
 import { Collapse } from "antd";
 import "antd/dist/antd.css";
+import styled from "styled-components";
+import "../index.css";
+
+const AboutCont = styled.div`
+  width: 48%;
+`;
+
+const AboutTitle = styled.h1`
+  font-size: 4rem;
+  display: flex;
+  margin: 3rem;
+`;
 
 const { Panel } = Collapse;
 
@@ -47,6 +59,8 @@ const SkillsText = (
     "SASS/SCSS",
     <br />
     "Styled Components",
+    <br />
+    ],
   </p>
 );
 
@@ -55,6 +69,8 @@ const LambdaSchool = (
     SubjectOfStudy: "Full Stack Web Development & Computer Science",
     <br />
     EndDate: "2020-07-31"
+    <br />
+    },
   </p>
 );
 
@@ -63,6 +79,8 @@ const CEU = (
     SubjectOfStudy: "Masters in Public Policy: Rural Development",
     <br />
     EndDate: "2014-07-15"
+    <br />
+    },
   </p>
 );
 
@@ -71,6 +89,8 @@ const UofA = (
     SubjectOfStudy: "Bachelors in Political Science",
     <br />
     EndDate: "2011-05-12"
+    <br />
+    },
   </p>
 );
 
@@ -84,92 +104,85 @@ const HobbiesText = (
     "All things food",
     <br />
     "Backpacking"
+    <br />
+    ],
   </p>
 );
 
 const About = () => {
   return (
-    <>
-      <Collapse bordered={false}>
-        <Panel header="TLDR:" key="1">
+    <AboutCont>
+      <AboutTitle>About</AboutTitle>
+      <Collapse bordered={false} className="site-collapse-custom-collapse">
+        <Panel header="TLDR:" key="1" className="site-collapse-custom-panel">
           {TLDRText}
         </Panel>
-        <Panel header="Experience:" key="2">
+        <Panel
+          header="Experience:"
+          key="2"
+          className="site-collapse-custom-panel"
+        >
           {XPText}
         </Panel>
-        <Panel header="Skills: [" key="3">
+        <Panel
+          header="Skills: ["
+          key="3"
+          className="site-collapse-custom-panel"
+        >
           {SkillsText}
         </Panel>
         <Panel
-          header="],"
-          showArrow={false}
-          style={{ paddingLeft: 24 }}
-          key="4"
-        ></Panel>
-        <Panel header="Education: {" key="5">
-          <Collapse>
+          header="Education: {"
+          key="5"
+          className="site-collapse-custom-panel"
+        >
+          <Collapse bordered={false} style={{ border: "none" }}>
             <Panel
               header="LambdaSchool: {"
-              style={{ paddingLeft: 24 }}
+              style={{ paddingLeft: 24, borderBottom: "none" }}
               defaultActiveKey="5"
+              className="site-collapse-custom-panel"
             >
               {LambdaSchool}
             </Panel>
-            <Panel
-              header="},"
-              showArrow={false}
-              style={{ paddingLeft: 48 }}
-              defaultActiveKey="5"
-            ></Panel>
           </Collapse>
-          <Collapse>
+          <Collapse bordered={false}>
             <Panel
               header="CentralEuropeanUniversity: {"
-              style={{ paddingLeft: 24 }}
+              style={{ paddingLeft: 24, borderBottom: "none" }}
               defaultActiveKey="5"
+              className="site-collapse-custom-panel"
             >
               {CEU}
             </Panel>
-            <Panel
-              header="},"
-              showArrow={false}
-              style={{ paddingLeft: 48 }}
-              defaultActiveKey="5"
-            ></Panel>
           </Collapse>
-          <Collapse>
+          <Collapse bordered={false}>
             <Panel
               header="UniversityOfArkansas: {"
-              style={{ paddingLeft: 24 }}
+              style={{ paddingLeft: 24, borderBottom: "none" }}
               defaultActiveKey="5"
+              className="site-collapse-custom-panel"
             >
               {UofA}
             </Panel>
             <Panel
               header="},"
               showArrow={false}
-              style={{ paddingLeft: 48 }}
-              defaultActiveKey="5"
+              style={{ paddingLeft: 24, borderBottom: "none" }}
+              key="6"
+              className="site-collapse-custom-panel"
             ></Panel>
           </Collapse>
         </Panel>
         <Panel
-          header="},"
-          showArrow={false}
-          style={{ paddingLeft: 24 }}
-          key="6"
-        ></Panel>
-        <Panel header="Hobbies: [" key="7">
+          header="Hobbies: ["
+          key="7"
+          className="site-collapse-custom-panel"
+        >
           {HobbiesText}
         </Panel>
-        <Panel
-          header="],"
-          showArrow={false}
-          style={{ paddingLeft: 24 }}
-          key="8"
-        ></Panel>
       </Collapse>
-    </>
+    </AboutCont>
   );
 };
 

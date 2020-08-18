@@ -3,18 +3,13 @@ import styled from "styled-components";
 
 const CardCont = styled.div`
   display: flex;
+  flex-direction: column;
 `;
 
 const ProjInfo = styled.div`
   display: flex
   flex-direction: column;
-  margin: 4rem;
-  width: 50%
-`;
-
-const ProjImg = styled.img`
-  width: 40%;
-  margin: 4rem;
+  margin: 3rem;
 `;
 
 const ProjDesc = styled.p`
@@ -31,7 +26,7 @@ const ProjCard = (props) => {
         <a href={props.github}>Github</a>
         <a href={props.deploy}>Deployed App</a>
       </ProjInfo>
-      <ProjImg src={props.image} alt="project"></ProjImg>
+      {/* <ProjImg src={props.image} alt="project"></ProjImg> */}
     </CardCont>
   );
 };
