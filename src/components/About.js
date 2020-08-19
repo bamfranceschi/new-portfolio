@@ -3,7 +3,6 @@ import { Collapse } from "antd";
 import "antd/dist/antd.css";
 import styled from "styled-components";
 import "../index.css";
-import AnnaSquare from "../images/Anna_Franceschi_square.jpeg";
 
 const AboutCont = styled.div`
   width: 45%;
@@ -14,8 +13,11 @@ const AboutCont = styled.div`
 const AboutTitle = styled.h1`
   font-size: 4rem;
   display: flex;
-  margin: 3rem;
+  margin-top: 3rem;
+  margin-left: 2rem;
   color: midnightblue;
+  border-bottom: 1.5px solid lightgrey;
+  width: 22%;
 `;
 
 const AboutHeader = styled.div`
@@ -25,13 +27,9 @@ const AboutHeader = styled.div`
   justify-content: space-evenly;
 `;
 
-const AnnaImgSquare = styled.img`
-  width: 40%;
-  border-radius: 50%;
-`;
-
 const AboutContent = styled.div`
   margin-top: 4rem;
+  margin-left: 1.5rem;
 `;
 
 const { Panel } = Collapse;
@@ -136,8 +134,7 @@ const About = () => {
     <AboutCont>
       <AboutTitle>About</AboutTitle>
       <AboutHeader>
-        <AnnaImgSquare alt="Anna Franceschi Headshot" src={AnnaSquare} />
-        <h3 style={{ color: "midnightblue" }}>Power Statement will go here!</h3>
+        <h3 style={{ color: "dimgrey" }}>Power Statement will go here!</h3>
       </AboutHeader>
       <AboutContent>
         <Collapse bordered={false} className="site-collapse-custom-collapse">

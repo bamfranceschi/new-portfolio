@@ -1,17 +1,28 @@
 import React from "react";
 import styled from "styled-components";
 import PDF from "./Anna_Franceschi_Resume.pdf";
+import AnnaPic from "../images/Anna_Franceschi_square.jpeg";
 
 const HeaderCont = styled.div`
   display: flex;
   justify-content: space-between;
+  margin-left: 2rem;
+  margin-right: 2rem;
+`;
+
+const HeaderImg = styled.img`
+  border-radius: 20%;
+  width: 30rem;
+  height: 30rem;
+  display: flex;
+  align-self: center;
+  margin-right: 10rem;
 `;
 
 const HeaderInfo = styled.div`
   display: flex;
   flex-direction: column;
   margin: 4rem;
-  justify-content: center;
 `;
 
 const HeaderName = styled.h1`
@@ -59,18 +70,14 @@ const ContactInfoSub = styled.div`
   width: 60%;
 `;
 
-const HeaderImg = styled.img`
-  width: 50%;
-`;
-
 const Header = () => {
   return (
     <HeaderCont>
       <HeaderInfo>
         <HeaderName>Anna Franceschi</HeaderName>
         <HeaderSub>
-          <h4 style={{ color: "midnightblue" }}>Full-Stack Developer</h4>
-          <h4 style={{ color: "midnightblue" }}>Austin, Tx</h4>
+          <h4 style={{ color: "dimgray" }}>Full-Stack Developer</h4>
+          <h4 style={{ color: "dimgray" }}>Austin, Tx</h4>
           <ContactInfo>
             <EmailATag href="mailto:anna.franceschi@gmail.com">
               anna.franceschi@gmail.com
@@ -95,10 +102,7 @@ const Header = () => {
           </ContactInfo>
         </HeaderSub>
       </HeaderInfo>
-      <HeaderImg
-        src="https://images.unsplash.com/photo-1560182704-284aa5d1b787?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=975&q=80"
-        alt="Austin Motel sign"
-      ></HeaderImg>
+      <HeaderImg src={AnnaPic} alt="Anna Franceschi Profile"></HeaderImg>
     </HeaderCont>
   );
 };

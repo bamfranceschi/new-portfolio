@@ -16,6 +16,8 @@ const Title = styled.h1`
   display: flex;
   margin: 3rem;
   color: midnightblue;
+  border-bottom: 1.5px solid lightgrey;
+  width: 26%;
 `;
 
 const ProjectCont = () => {

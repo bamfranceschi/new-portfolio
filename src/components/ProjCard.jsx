@@ -9,11 +9,33 @@ const CardCont = styled.div`
 const ProjInfo = styled.div`
   display: flex
   flex-direction: column;
-  margin: 3rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  margin-top: 2rem;
 `;
 
 const ProjDesc = styled.p`
   font-size: 1.8rem;
+  margin-right: 2rem;
+`;
+
+const InfoBar = styled.h6`
+  font-size: 1.3rem;
+  color: midnightblue;
+`;
+
+const LinksCont = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 26%;
+  font-size: 1.3rem;
+`;
+
+const BottomLine = styled.div`
+  border-bottom: 1.5px solid lightgrey;
+  width: 80%;
+  margin-top: 1rem;
 `;
 
 const ProjCard = (props) => {
@@ -21,16 +43,21 @@ const ProjCard = (props) => {
     <CardCont>
       <ProjInfo>
         <h1 style={{ color: "midnightblue" }}>{props.name}</h1>
-        <h3 style={{ color: "midnightblue" }}>{`${props.tech}`}</h3>
+        <h3
+          style={{ color: "dimgrey", fontSize: "1.3rem" }}
+        >{`${props.tech}`}</h3>
+        <LinksCont>
+          <a href={props.github} target="_" style={{ color: "dimgrey" }}>
+            Github
+          </a>
+          <InfoBar>|</InfoBar>
+          <a href={props.deploy} target="_" style={{ color: "dimgrey" }}>
+            Deployed App
+          </a>
+        </LinksCont>
         <ProjDesc>{props.description}</ProjDesc>
-        <a href={props.github} target="_" style={{ color: "midnightblue" }}>
-          Github
-        </a>
-        <a href={props.deploy} target="_" style={{ color: "midnightblue" }}>
-          Deployed App
-        </a>
+        <BottomLine></BottomLine>
       </ProjInfo>
-      {/* <ProjImg src={props.image} alt="project"></ProjImg> */}
     </CardCont>
   );
 };
