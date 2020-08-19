@@ -20,11 +20,15 @@ const ProjCard = (props) => {
   return (
     <CardCont>
       <ProjInfo>
-        <h1>{props.name}</h1>
-        <h3>{`${props.tech}`}</h3>
+        <h1 style={{ color: "midnightblue" }}>{props.name}</h1>
+        <h3 style={{ color: "midnightblue" }}>{`${props.tech}`}</h3>
         <ProjDesc>{props.description}</ProjDesc>
-        <a href={props.github}>Github</a>
-        <a href={props.deploy}>Deployed App</a>
+        <a href={props.github} target="_" style={{ color: "midnightblue" }}>
+          Github
+        </a>
+        <a href={props.deploy} target="_" style={{ color: "midnightblue" }}>
+          Deployed App
+        </a>
       </ProjInfo>
       {/* <ProjImg src={props.image} alt="project"></ProjImg> */}
     </CardCont>

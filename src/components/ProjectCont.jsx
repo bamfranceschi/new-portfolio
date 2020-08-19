@@ -8,12 +8,14 @@ const ProjParent = styled.div`
   flex-direction: column;
   justify-content: center;
   width: 48%;
+  color: midnightblue;
 `;
 
 const Title = styled.h1`
   font-size: 4rem;
   display: flex;
   margin: 3rem;
+  color: midnightblue;
 `;
 
 const ProjectCont = () => {

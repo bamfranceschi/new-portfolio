@@ -16,31 +16,34 @@ const HeaderInfo = styled.div`
 
 const HeaderName = styled.h1`
   font-size: 5rem;
+  color: midnightblue;
 `;
 
 const HeaderSub = styled.div`
   font-size: 3rem;
+  color: midnightblue;
 `;
 
 const AInfoTag = styled.a`
   font-size: 1.8rem;
-  color: black;
+  color: midnightblue;
 `;
 
 const EmailATag = styled.a`
   font-size: 1.8rem;
-  color: black;
   width: 61%;
+  color: midnightblue;
 `;
 
 const NumberATag = styled.a`
   font-size: 1.8rem;
-  color: black;
   width: 38%;
+  color: midnightblue;
 `;
 
 const InfoBar = styled.h6`
   font-size: 1.8rem;
+  color: midnightblue;
 `;
 
 const ContactInfo = styled.div`
@@ -66,8 +69,8 @@ const Header = () => {
       <HeaderInfo>
         <HeaderName>Anna Franceschi</HeaderName>
         <HeaderSub>
-          <h4>Full-Stack Developer</h4>
-          <h4>Austin, Tx</h4>
+          <h4 style={{ color: "midnightblue" }}>Full-Stack Developer</h4>
+          <h4 style={{ color: "midnightblue" }}>Austin, Tx</h4>
           <ContactInfo>
             <EmailATag href="mailto:anna.franceschi@gmail.com">
               anna.franceschi@gmail.com
