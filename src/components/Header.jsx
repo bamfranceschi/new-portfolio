@@ -66,8 +66,10 @@ const ContactInfo = styled.div`
 const ContactInfoSub = styled.div`
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-between;
   width: 60%;
+  height: 45px;
 `;
 
 const Header = () => {
@@ -76,8 +78,8 @@ const Header = () => {
       <HeaderInfo>
         <HeaderName>Anna Franceschi</HeaderName>
         <HeaderSub>
-          <h4 style={{ color: "dimgray" }}>Full-Stack Developer</h4>
-          <h4 style={{ color: "dimgray" }}>Austin, Tx</h4>
+          <h4 style={{ color: "dimgray" }}>Full Stack Web Developer</h4>
+          <h5 style={{ color: "dimgray" }}>Austin, Tx</h5>
           <ContactInfo>
             <EmailATag href="mailto:anna.franceschi@gmail.com">
               anna.franceschi@gmail.com

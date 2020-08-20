@@ -11,7 +11,7 @@ const ProjInfo = styled.div`
   flex-direction: column;
   margin-left: 3rem;
   margin-right: 3rem;
-  margin-top: 2rem;
+  // margin-top: 1rem;
 `;
 
 const ProjDesc = styled.p`
@@ -22,13 +22,15 @@ const ProjDesc = styled.p`
 const InfoBar = styled.h6`
   font-size: 1.3rem;
   color: midnightblue;
+  margin: 0;
 `;
 
 const LinksCont = styled.div`
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-between;
-  width: 26%;
+  width: 250px;
   font-size: 1.3rem;
 `;
 
@@ -42,7 +44,9 @@ const ProjCard = (props) => {
   return (
     <CardCont>
       <ProjInfo>
-        <h1 style={{ color: "midnightblue" }}>{props.name}</h1>
+        <h1 style={{ color: "midnightblue", marginTop: "1.5rem" }}>
+          {props.name}
+        </h1>
         <h3
           style={{ color: "dimgrey", fontSize: "1.3rem" }}
         >{`${props.tech}`}</h3>

@@ -1,8 +1,16 @@
 import React from "react";
-import { Collapse } from "antd";
-import "antd/dist/antd.css";
+// import { Collapse } from "antd";
+// import "antd/dist/antd.css";
 import styled from "styled-components";
-import "../index.css";
+import "../../index.css";
+// import TLDRText from "./TLDR";
+// import XPText from "./XP";
+// import SkillsText from "./Skills";
+// import HobbiesText from "./Hobbies";
+// import LambdaSchool from "./Education/LambdaSchool";
+// import CEU from "./Education/CEU";
+// import UofA from "./Education/UofA";
+import AboutCollapse from "./AboutCollapse";
 
 const AboutCont = styled.div`
   width: 45%;
@@ -25,118 +33,32 @@ const AboutHeader = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
+  margin-top: 6rem;
+  margin-left: 2rem;
+  font-size: 1.2rem;
 `;
 
-const AboutContent = styled.div`
-  margin-top: 4rem;
-  margin-left: 1.5rem;
-`;
+// const AboutContent = styled.div`
+//   margin-top: 4rem;
+//   margin-left: 1.5rem;
+// `;
 
-const { Panel } = Collapse;
-
-const TLDRText = (
-  <p style={{ paddingLeft: 24, fontSize: "1.3rem", color: "midnightblue" }}>
-    This will be the TLDR headline
-  </p>
-);
-const XPText = (
-  <p style={{ paddingLeft: 24, fontSize: "1.3rem", color: "midnightblue" }}>
-    "Internship with Connect Our Kids, Team Lead experience, all projects. Chief
-    Development Officer for Austin-based int'l nonprofit, co-founder & CEO of
-    startup, Production Manager for Digital Marketing firm."
-  </p>
-);
-const SkillsText = (
-  <p style={{ paddingLeft: 24, fontSize: "1.3rem", color: "midnightblue" }}>
-    "JavaScript",
-    <br /> "Python",
-    <br /> "TypeScript",
-    <br />
-    "ReactJS",
-    <br />
-    "NodeJS",
-    <br />
-    "PostgreSQL",
-    <br />
-    "Jest",
-    <br />
-    "Express",
-    <br />
-    "Knex",
-    <br />
-    "Redux",
-    <br />
-    "ReactNative",
-    <br />
-    "SQL",
-    <br />
-    "SQLite3",
-    <br />
-    "HTML",
-    <br />
-    "CSS",
-    <br />
-    "SASS/SCSS",
-    <br />
-    "Styled Components",
-    <br />
-    <p style={{ fontSize: "1.7rem" }}>],</p>
-  </p>
-);
-
-const LambdaSchool = (
-  <p style={{ paddingLeft: 24, fontSize: "1.3rem", color: "midnightblue" }}>
-    SubjectOfStudy: "Full Stack Web Development & Computer Science",
-    <br />
-    EndDate: "2020-07-31"
-    <br />
-    },
-  </p>
-);
-
-const CEU = (
-  <p style={{ paddingLeft: 24, fontSize: "1.3rem", color: "midnightblue" }}>
-    SubjectOfStudy: "Masters in Public Policy: Rural Development",
-    <br />
-    EndDate: "2014-07-15"
-    <br />
-    },
-  </p>
-);
-
-const UofA = (
-  <p style={{ paddingLeft: 24, fontSize: "1.3rem", color: "midnightblue" }}>
-    SubjectOfStudy: "Bachelors in Political Science",
-    <br />
-    EndDate: "2011-05-12"
-    <br />
-    },
-  </p>
-);
-
-const HobbiesText = (
-  <p style={{ paddingLeft: 24, fontSize: "1.3rem", color: "midnightblue" }}>
-    "Krav Maga", <br />
-    "Carpentry",
-    <br />
-    "Textile art",
-    <br />
-    "All things food",
-    <br />
-    "Backpacking"
-    <br />
-    <p style={{ fontSize: "1.7rem" }}>],</p>
-  </p>
-);
+// const { Panel } = Collapse;
 
 const About = () => {
   return (
     <AboutCont>
       <AboutTitle>About</AboutTitle>
       <AboutHeader>
-        <h3 style={{ color: "dimgrey" }}>Power Statement will go here!</h3>
+        <h3 style={{ color: "dimgrey" }}>
+          Hi, I'm Anna! I'm passionate about creating and building, be it with
+          code or any other medium. As a full stack web developer, I build front
+          ends using JavaScript, React and ReactNative, and back ends using
+          NodeJS and Express.
+        </h3>
       </AboutHeader>
-      <AboutContent>
+      <AboutCollapse />
+      {/* <AboutContent>
         <Collapse bordered={false} className="site-collapse-custom-collapse">
           <Panel
             header="TLDR:"
@@ -231,7 +153,7 @@ const About = () => {
             {HobbiesText}
           </Panel>
         </Collapse>
-      </AboutContent>
+      </AboutContent> */}
     </AboutCont>
   );
 };

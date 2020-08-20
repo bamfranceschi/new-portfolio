@@ -13,7 +13,7 @@ code {
     monospace;
 }
 
-.site-collapse-custom-collapse {
+/* .site-collapse-custom-collapse {
   border: none;
   background: white;
   overflow: hidden;
@@ -28,4 +28,4 @@ code {
 
 .ant-collapse .ant-collapse-item .ant-collapse-header {
   color: midnightblue !important;
-}
+} */
