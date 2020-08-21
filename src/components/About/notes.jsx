@@ -41,9 +41,18 @@ function Test() {
   };
 
   return (
-    <Collapse onChange={callback}>
+    <Collapse
+      onChange={callback}
+      bordered={false}
+      className="site-collapse-custom-collapse"
+    >
       {state.map((h, idx) => (
-        <Panel header={<Header {...h} />} key={idx}>
+        <Panel
+          header={<Header {...h} />}
+          key={idx}
+          className="site-collapse-custom-panel"
+          style={{ fontSize: "1.7rem" }}
+        >
           {text}
         </Panel>
       ))}

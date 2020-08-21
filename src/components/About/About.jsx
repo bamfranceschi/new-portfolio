@@ -47,89 +47,77 @@ const { Panel } = Collapse;
 
 console.log(window);
 
+const Header = (props) => {
+  console.log(props);
+  if (props.selected) {
+    return <p>{props.short}</p>;
+  }
+
+  return <p>{props.long}</p>;
+};
+
 const About = () => {
-  const [tldrState, setTldrState] = useState(
-    "TLDR: Lorem impsum blah blah blah blah blah blah..."
-  );
+  const [state, setState] = useState([
+    {
+      short: "TLDR:",
+      long: "TLDR: Lorem impsum blah blah blah blah blah blah..",
+      selected: false,
+      text: TLDRText,
+    },
+    {
+      short: "Skills:",
+      long: "Skills: JavaScript Python TypeScript...",
+      selected: false,
+      text: SkillsText,
+    },
+    {
+      short: "Experience:",
+      long: "Experience: lorem ipsum blah blah blah blah blah blah blah...",
+      selected: false,
+      text: XPText,
+    },
+    {
+      short: "Education:",
+      long: "Education: LambdaSchool: {...}, {CentralEuropeanUniv...",
+      selected: false,
+      text: "",
+    },
+    {
+      short: "LambdaSchool: {",
+      long: "LambdaSchool: {SubjectOfStudy: Full Stack Web Developmen..",
+      selected: false,
+      text: LambdaSchool,
+    },
+    {
+      short: "CentralEuropeanUniversity: {",
+      long: "CentralEuropeanUniversity: {SubjectOfStudy: Mast...",
+      selected: false,
+      text: CEU,
+    },
+    {
+      short: "UniversityOfArkansas",
+      long: "UniversityOfArkansas: {SubjectOfStudy: Political Sci...",
+      selected: false,
+      text: UofA,
+    },
+    {
+      short: "Hobbies: [",
+      long: "Hobbies: Krav Maga, Carpentry, Texti...",
+      selected: false,
+      text: HobbiesText,
+    },
+  ]);
 
-  const [skillsState, setSkillsState] = useState(
-    "Skills: JavaScript Python TypeScript..."
-  );
+  const changeHeaderMain = (keys) => {
+    setState((prevState) => {
+      const newState = prevState.map((h) => {
+        h.selected = false;
+        return h;
+      });
 
-  const [xpState, setXPState] = useState(
-    "Experience: lorem ipsum blah blah blah blah blah blah blah..."
-  );
-  const [eduState, setEduState] = useState(
-    "Education: LambdaSchool: {...}, {CentralEuropeanUniv..."
-  );
-
-  const [lambState, setLambState] = useState(
-    "LambdaSchool: {SubjectOfStudy: Full Stack Web Developmen.."
-  );
-
-  const [ceuState, setCeuState] = useState(
-    "CentralEuropeanUniversity: {SubjectOfStudy: Mast..."
-  );
-
-  const [uofaState, setUofaState] = useState(
-    "UniversityOfArkansas: {SubjectOfStudy: Political Sci..."
-  );
-
-  const [hobbiesState, setHobbiesState] = useState(
-    "Hobbies: Krav Maga, Carpentry, Texti..."
-  );
-
-  const changeHeaderMain = (key) => {
-    if (key.includes("1")) {
-      setTldrState("TLDR:");
-    } else {
-      setTldrState("TLDR: Lorem impsum blah blah blah blah blah blah...");
-    }
-    if (key.includes("2")) {
-      setSkillsState("Skills:");
-    } else {
-      setSkillsState("Skills: JavaScript Python TypeScript...");
-    }
-    if (key.includes("3")) {
-      setXPState("Experience:");
-    } else {
-      setXPState(
-        "Experience: lorem ipsum blah blah blah blah blah blah blah..."
-      );
-    }
-    if (key.includes("4")) {
-      setEduState("Education: {");
-    } else {
-      setEduState("Education: LambdaSchool: {...}, {CentralEuropeanUniv...");
-    }
-
-    if (key.includes("9")) {
-      setHobbiesState("Hobbies: [");
-    } else {
-      setHobbiesState("Hobbies: Krav Maga, Carpentry, Texti...");
-    }
-  };
-
-  const changeHeaderMinor = (key) => {
-    if (key.includes("5")) {
-      setLambState("LambdaSchool: {");
-    } else {
-      setLambState(
-        "LambdaSchool: {SubjectOfStudy: Full Stack Web Developmen.."
-      );
-    }
-
-    if (key.includes("6")) {
-      setCeuState("CentralEuropeanUniversity: {");
-    } else {
-      setCeuState("CentralEuropeanUniversity: {SubjectOfStudy: Mast...");
-    }
-
-    if (key.includes("7")) {
-      setUofaState("UniversityOfArkansas: {");
-    } else {
-      setUofaState("UniversityOfArkansas: {SubjectOfStudy: Political Sci...");
-    }
+      keys.forEach((k) => (newState[k].selected = true));
+      return newState;
+    });
   };
 
   return (
@@ -146,6 +134,23 @@ const About = () => {
       {/* <AboutCollapse /> */}
       <AboutContent>
         <Collapse
+          onChange={changeHeaderMain}
+          bordered={false}
+          className="site-collapse-custom-collapse"
+        >
+          {state.map((h, idx) => (
+            <Panel
+              header={<Header {...h} />}
+              key={idx}
+              className="site-collapse-custom-panel"
+              style={{ fontSize: "1.7rem" }}
+            >
+              {h.text}
+            </Panel>
+          ))}
+        </Collapse>
+
+        {/* <Collapse
           bordered={false}
           className="site-collapse-custom-collapse"
           onChange={changeHeaderMain}
@@ -241,9 +246,9 @@ const About = () => {
             className="site-collapse-custom-panel"
             style={{ fontSize: "1.7rem" }}
           >
-            {HobbiesText}
-          </Panel>
-        </Collapse>
+            {HobbiesText} */}
+        {/* </Panel>
+        </Collapse> */}
       </AboutContent>
     </AboutCont>
   );
