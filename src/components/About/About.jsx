@@ -7,9 +7,7 @@ import TLDRText from "./TLDR";
 import XPText from "./XP";
 import SkillsText from "./Skills";
 import HobbiesText from "./Hobbies";
-import LambdaSchool from "./Education/LambdaSchool";
-import CEU from "./Education/CEU";
-import UofA from "./Education/UofA";
+import Education from "./Education";
 // import AboutCollapse from "./AboutCollapse";
 
 const AboutCont = styled.div`
@@ -78,28 +76,29 @@ const About = () => {
     },
     {
       short: "Education:",
-      long: "Education: LambdaSchool: {...}, {CentralEuropeanUniv...",
+      long:
+        "Education: [ {name: LambdaSchool: ...}, {name: CentralEuropeanUniv...",
       selected: false,
-      text: "",
+      text: Education,
     },
-    {
-      short: "LambdaSchool: {",
-      long: "LambdaSchool: {SubjectOfStudy: Full Stack Web Developmen..",
-      selected: false,
-      text: LambdaSchool,
-    },
-    {
-      short: "CentralEuropeanUniversity: {",
-      long: "CentralEuropeanUniversity: {SubjectOfStudy: Mast...",
-      selected: false,
-      text: CEU,
-    },
-    {
-      short: "UniversityOfArkansas",
-      long: "UniversityOfArkansas: {SubjectOfStudy: Political Sci...",
-      selected: false,
-      text: UofA,
-    },
+    // {
+    //   short: "LambdaSchool: {",
+    //   long: "LambdaSchool: {SubjectOfStudy: Full Stack Web Developmen..",
+    //   selected: false,
+    //   text: LambdaSchool,
+    // },
+    // {
+    //   short: "CentralEuropeanUniversity: {",
+    //   long: "CentralEuropeanUniversity: {SubjectOfStudy: Mast...",
+    //   selected: false,
+    //   text: CEU,
+    // },
+    // {
+    //   short: "UniversityOfArkansas",
+    //   long: "UniversityOfArkansas: {SubjectOfStudy: Political Sci...",
+    //   selected: false,
+    //   text: UofA,
+    // },
     {
       short: "Hobbies: [",
       long: "Hobbies: Krav Maga, Carpentry, Texti...",
@@ -131,7 +130,6 @@ const About = () => {
           NodeJS and Express.
         </h3>
       </AboutHeader>
-      {/* <AboutCollapse /> */}
       <AboutContent>
         <Collapse
           onChange={changeHeaderMain}
