@@ -53,6 +53,6 @@
       "Built a RESTful API in NodeJS with Express, including all CRUD operations",
       "Created persisting database using PostgreSQL, Knex with 100% complete test coverage using Jest"
     ],
-    "logo": "replate.png"
+    "logo": "replate.svg"
   }
 ]

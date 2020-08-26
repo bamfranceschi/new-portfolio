@@ -50,7 +50,6 @@ const Logo = styled.img`
 
 const HeadLine = styled.div`
   display: flex;
-  justify-content: space-between;
   // border: 1px solid red;
   align-items: center;
   width: 85%;
@@ -61,13 +60,19 @@ const ProjCard = (props) => {
     <CardCont>
       <ProjInfo>
         <HeadLine>
-          <h1 style={{ color: "midnightblue", marginTop: "1.5rem" }}>
-            {props.name}
-          </h1>
           <Logo
             alt={"project logo"}
             src={require(`../images/${props.logo}`)}
           ></Logo>
+          <h1
+            style={{
+              color: "midnightblue",
+              marginTop: "1.5rem",
+              marginLeft: "2rem",
+            }}
+          >
+            {props.name}
+          </h1>
         </HeadLine>
         <h3
           style={{ color: "dimgrey", fontSize: "1.3rem" }}
