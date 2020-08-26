@@ -15,18 +15,18 @@ const BannerCont = styled.div`
   font-size: 6rem;
   margin-top: 3rem;
   margin-bottom: 3rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
+  margin-left: 3rem;
+  margin-right: 10rem;
 `;
 
 const Banner = () => {
   return (
     <BannerCont>
       <DiJavascript1 style={{ color: "midnightblue" }} />
-      <i
+      {/* <i
         class="devicon-typescript-plain"
         style={{ fontSize: "5rem", alignSelf: "center", color: "midnightblue" }}
-      ></i>
+      ></i> */}
       <DiPython style={{ color: "midnightblue" }} />
       <DiNodejsSmall style={{ color: "midnightblue" }} />
       <DiPostgresql style={{ color: "midnightblue" }} />
@@ -44,9 +44,7 @@ const Banner = () => {
       </svg>
       <DiHtml5 style={{ color: "midnightblue" }} />
       <DiSass style={{ color: "midnightblue" }} />
-      <DiCss3Full style={{ color: "midnightblue" }} />
-      {/* missing react native
-       */}
+      {/* <DiCss3Full style={{ color: "midnightblue" }} /> */}
     </BannerCont>
   );
 };

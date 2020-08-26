@@ -9,7 +9,8 @@ const ParentDiv = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
 `;
 
 const ContentDiv = styled.div`

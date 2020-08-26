@@ -7,7 +7,7 @@ const ProjParent = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 48%;
+  width: 53%;
   color: midnightblue;
 `;
 

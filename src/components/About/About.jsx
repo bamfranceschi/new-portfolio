@@ -10,7 +10,7 @@ import HobbiesText from "./Hobbies";
 import Education from "./Education";
 
 const AboutCont = styled.div`
-  width: 45%;
+  width: 40%;
   margin-left: 4rem;
   margin-right: 2rem;
 `;

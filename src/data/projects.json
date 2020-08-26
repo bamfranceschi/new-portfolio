@@ -1,6 +1,6 @@
 [
   {
-    "name": "Connect Our Kids - Mobile App",
+    "name": "Connect Our Kids",
     "description": "Connect Our Kids helps social workers locate relatives of foster children, with the aim of finding a permanent home for these children.",
     "tech_stack": ["ReactNative", " TypeScript", " Redux"],
     "github": "https://github.com/Lambda-School-Labs/connect-our-kids-fe",
@@ -12,7 +12,7 @@
     "logo": "connect.png"
   },
   {
-    "name": "Kansha - Web App",
+    "name": "Kansha",
     "description": "Kansha makes it easy to recognize hardworking employees and peers with rewards and personalized messages.",
     "tech_stack": [
       "ReactJS",
@@ -36,7 +36,7 @@
     "logo": "Kansha@2x.png"
   },
   {
-    "name": "Replate - Web App",
+    "name": "Replate",
     "description": "Replate reduces the amount of food waste by connecting food bank volunteers with local restaurants and grocers. Volunteers can accept pickup orders of leftover food to deliver to food banks.",
     "tech_stack": [
       "ReactJS",
