@@ -32,6 +32,8 @@ const ProjectCont = () => {
           tech={p.tech_stack}
           github={p.github}
           deploy={p.deploy}
+          actions={p.actions}
+          logo={p.logo}
         />
       ))}
     </ProjParent>

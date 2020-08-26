@@ -2,15 +2,18 @@
   {
     "name": "Connect Our Kids - Mobile App",
     "description": "Connect Our Kids helps social workers locate relatives of foster children, with the aim of finding a permanent home for these children.",
-    "image": "https://images.unsplash.com/photo-1518101645466-7795885ff8f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2700&q=80",
     "tech_stack": ["ReactNative", " TypeScript", " Redux"],
     "github": "https://github.com/Lambda-School-Labs/connect-our-kids-fe",
-    "deploy": "https://apps.apple.com/us/app/connect-our-kids/id1471038972"
+    "deploy": "https://apps.apple.com/us/app/connect-our-kids/id1471038972",
+    "actions": [
+      "Expanded functionality to enable users to add new child cases and family connections in app",
+      "Incorporated MomentJS with new case screen and case details screen to correctly display and format data for GraphQL backend"
+    ],
+    "logo": "connect.png"
   },
   {
     "name": "Kansha - Web App",
     "description": "Kansha makes it easy to recognize hardworking employees and peers with rewards and personalized messages.",
-    "image": "https://kansharewards.com/static/media/people-jumping.12fa9b72.jpeg",
     "tech_stack": [
       "ReactJS",
       " Axios",
@@ -25,12 +28,16 @@
       "https://github.com/Lambda-School-Labs/kansha-fe",
       "https://github.com/Lambda-School-Labs/kansha-be"
     ],
-    "deploy": "https://kansharewards.com/"
+    "deploy": "https://kansharewards.com/",
+    "actions": [
+      "Implemented user onboarding flow and created dynamic feed sidebar on user dashboards using React and SASS",
+      "Reached 70% test coverage on PostgreSQL backend with SuperTest"
+    ],
+    "logo": "Kansha@2x.png"
   },
   {
     "name": "Replate - Web App",
     "description": "Replate reduces the amount of food waste by connecting food bank volunteers with local restaurants and grocers. Volunteers can accept pickup orders of leftover food to deliver to food banks.",
-    "image": "https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80",
     "tech_stack": [
       "ReactJS",
       " Axios",
@@ -41,6 +48,11 @@
       " Knex"
     ],
     "github": "https://github.com/Replate1/Back-End",
-    "deploy": "https://replate-seven.now.sh/#/react-auth-ui/sign-in"
+    "deploy": "https://replate-seven.now.sh/#/react-auth-ui/sign-in",
+    "actions": [
+      "Built a RESTful API in NodeJS with Express, including all CRUD operations",
+      "Created persisting database using PostgreSQL, Knex with 100% complete test coverage using Jest"
+    ],
+    "logo": "replate.png"
   }
 ]

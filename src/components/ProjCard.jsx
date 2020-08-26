@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import ProjectAction from "../components/ProjAction";
 
 const CardCont = styled.div`
   display: flex;
@@ -11,12 +12,14 @@ const ProjInfo = styled.div`
   flex-direction: column;
   margin-left: 3rem;
   margin-right: 3rem;
-  // margin-top: 1rem;
+  margin-top: 1rem;
 `;
 
 const ProjDesc = styled.p`
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   margin-right: 2rem;
+  width: 90%;
+  margin-top: 0.5rem;
 `;
 
 const InfoBar = styled.h6`
@@ -40,13 +43,32 @@ const BottomLine = styled.div`
   margin-top: 1rem;
 `;
 
+const Logo = styled.img`
+  width: 70px
+  height: 70px
+`;
+
+const HeadLine = styled.div`
+  display: flex;
+  justify-content: space-between;
+  // border: 1px solid red;
+  align-items: center;
+  width: 85%;
+`;
+
 const ProjCard = (props) => {
   return (
     <CardCont>
       <ProjInfo>
-        <h1 style={{ color: "midnightblue", marginTop: "1.5rem" }}>
-          {props.name}
-        </h1>
+        <HeadLine>
+          <h1 style={{ color: "midnightblue", marginTop: "1.5rem" }}>
+            {props.name}
+          </h1>
+          <Logo
+            alt={"project logo"}
+            src={require(`../images/${props.logo}`)}
+          ></Logo>
+        </HeadLine>
         <h3
           style={{ color: "dimgrey", fontSize: "1.3rem" }}
         >{`${props.tech}`}</h3>
@@ -60,6 +82,11 @@ const ProjCard = (props) => {
           </a>
         </LinksCont>
         <ProjDesc>{props.description}</ProjDesc>
+        <ul>
+          {props.actions.map((a, idx) => (
+            <ProjectAction key={idx} a={a} />
+          ))}
+        </ul>
         <BottomLine></BottomLine>
       </ProjInfo>
     </CardCont>

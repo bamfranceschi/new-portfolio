@@ -8,7 +8,6 @@ import XPText from "./XP";
 import SkillsText from "./Skills";
 import HobbiesText from "./Hobbies";
 import Education from "./Education";
-// import AboutCollapse from "./AboutCollapse";
 
 const AboutCont = styled.div`
   width: 45%;
@@ -48,10 +47,21 @@ console.log(window);
 const Header = (props) => {
   console.log(props);
   if (props.selected) {
-    return <p>{props.short}</p>;
+    return <p style={{ fontSize: "1.7rem" }}>{props.short}</p>;
   }
 
-  return <p>{props.long}</p>;
+  return (
+    <p
+      style={{
+        fontSize: "1.7rem",
+        overflow: "hidden",
+        textOverflow: "ellipsis",
+        whiteSpace: "nowrap",
+      }}
+    >
+      {props.long}
+    </p>
+  );
 };
 
 const About = () => {
@@ -81,24 +91,6 @@ const About = () => {
       selected: false,
       text: Education,
     },
-    // {
-    //   short: "LambdaSchool: {",
-    //   long: "LambdaSchool: {SubjectOfStudy: Full Stack Web Developmen..",
-    //   selected: false,
-    //   text: LambdaSchool,
-    // },
-    // {
-    //   short: "CentralEuropeanUniversity: {",
-    //   long: "CentralEuropeanUniversity: {SubjectOfStudy: Mast...",
-    //   selected: false,
-    //   text: CEU,
-    // },
-    // {
-    //   short: "UniversityOfArkansas",
-    //   long: "UniversityOfArkansas: {SubjectOfStudy: Political Sci...",
-    //   selected: false,
-    //   text: UofA,
-    // },
     {
       short: "Hobbies: [",
       long: "Hobbies: Krav Maga, Carpentry, Texti...",
@@ -141,112 +133,11 @@ const About = () => {
               header={<Header {...h} />}
               key={idx}
               className="site-collapse-custom-panel"
-              style={{ fontSize: "1.7rem" }}
             >
               {h.text}
             </Panel>
           ))}
         </Collapse>
-
-        {/* <Collapse
-          bordered={false}
-          className="site-collapse-custom-collapse"
-          onChange={changeHeaderMain}
-        >
-          <Panel
-            header={tldrState}
-            key="1"
-            className="site-collapse-custom-panel"
-            style={{ fontSize: "1.7rem" }}
-          >
-            {TLDRText}
-          </Panel>
-          <Panel
-            header={skillsState}
-            key="2"
-            className="site-collapse-custom-panel"
-            style={{ fontSize: "1.7rem" }}
-            ariaExpanded="true"
-          >
-            {SkillsText}
-          </Panel>
-          <Panel
-            header={xpState}
-            key="3"
-            className="site-collapse-custom-panel"
-            style={{ fontSize: "1.7rem" }}
-          >
-            {XPText}
-          </Panel>
-          <Panel
-            header={eduState}
-            key="4"
-            className="site-collapse-custom-panel"
-            style={{ fontSize: "1.7rem" }}
-          >
-            <Collapse
-              bordered={false}
-              style={{ border: "none" }}
-              onChange={changeHeaderMinor}
-            >
-              <Panel
-                header={lambState}
-                style={{
-                  paddingLeft: 24,
-                  borderBottom: "none",
-                  fontSize: "1.3rem",
-                }}
-                key="5"
-                className="site-collapse-custom-panel"
-              >
-                {LambdaSchool}
-              </Panel>
-              <Panel
-                header={ceuState}
-                style={{
-                  paddingLeft: 24,
-                  borderBottom: "none",
-                  fontSize: "1.3rem",
-                }}
-                key="6"
-                className="site-collapse-custom-panel"
-              >
-                {CEU}
-              </Panel>
-              <Panel
-                header={uofaState}
-                style={{
-                  paddingLeft: 24,
-                  borderBottom: "none",
-                  fontSize: "1.3rem",
-                }}
-                key="7"
-                className="site-collapse-custom-panel"
-              >
-                {UofA}
-              </Panel>
-              <Panel
-                header="},"
-                showArrow={false}
-                style={{
-                  paddingLeft: 24,
-                  borderBottom: "none",
-                  fontSize: "1.7rem",
-                }}
-                key="8"
-                className="site-collapse-custom-panel"
-              ></Panel>
-            </Collapse>
-          </Panel>
-          <Panel
-            header={hobbiesState}
-            key="9"
-            className="site-collapse-custom-panel"
-            style={{ fontSize: "1.7rem" }}
-          >
-            {HobbiesText} */}
-        {/* </Panel>
-        </Collapse> */}
       </AboutContent>
     </AboutCont>
   );
