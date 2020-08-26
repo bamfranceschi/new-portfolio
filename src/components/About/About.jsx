@@ -74,7 +74,8 @@ const About = () => {
     },
     {
       short: "Skills:",
-      long: "Skills: JavaScript Python TypeScript...",
+      long:
+        'Skills: [ "JavaScript", "Python", "ReactJS", "NodeJs", "PostgreSQL", "Jest"...',
       selected: false,
       text: SkillsText,
     },
@@ -92,8 +93,9 @@ const About = () => {
       text: Education,
     },
     {
-      short: "Hobbies: [",
-      long: "Hobbies: Krav Maga, Carpentry, Texti...",
+      short: "Hobbies:",
+      long:
+        'Hobbies: [ "Krav Maga", "Carpentry", "Textile art", "Cooking and baking...',
       selected: false,
       text: HobbiesText,
     },
@@ -117,9 +119,13 @@ const About = () => {
       <AboutHeader>
         <h3 style={{ color: "dimgrey" }}>
           Hi, I'm Anna! I'm passionate about creating and building, be it with
-          code or any other medium. As a full stack web developer, I build front
-          ends using JavaScript, React and ReactNative, and back ends using
-          NodeJS and Express.
+          code or any other medium. I'm a self-taught artist and crafter, and
+          apply the same gusto for creating to web development projects.
+          <br />
+          <br /> When I'm not coding, I'm rolling with the punches at my Krav
+          Maga studio, backpacking in West Texas, hanging with my hubslice Mike
+          and pup-child Lyra, or
+          cooking/gardening/reading/crafting/insert-introvert-hobby-here.
         </h3>
       </AboutHeader>
       <AboutContent>

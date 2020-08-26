@@ -22,10 +22,6 @@ const SkillsText = (
     <br />
     "ReactNative",
     <br />
-    "SQL",
-    <br />
-    "SQLite3",
-    <br />
     "HTML",
     <br />
     "CSS",
