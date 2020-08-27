@@ -13,20 +13,14 @@ const BannerCont = styled.div`
   display: flex;
   justify-content: space-around;
   font-size: 6rem;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  margin-left: 3rem;
-  margin-right: 10rem;
-
-  ${media.between("smMobile", "tablet")`
-  display: none;
-  `}
-
-  ${media.between("tablet", "smScreen")`
-  width: 90%
-  margin: 0;
   align-self: center;
-  `}
+  width: 90% 
+  margin-top: 2rem;
+
+    ${media.between("smMobile", "tablet")`
+  display: none;
+
+  `} 
 `;
 
 const Banner = () => {

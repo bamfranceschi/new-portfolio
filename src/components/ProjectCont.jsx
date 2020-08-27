@@ -14,6 +14,11 @@ const ProjParent = styled.div`
   ${media.between("smMobile", "smScreen")`
   width: 100%
   `}
+
+  ${media.between("smScreen", "mdScreen")`
+  width: 49%;
+  margin-right: 1rem;
+  `}
 `;
 
 const Title = styled.h1`
@@ -31,6 +36,13 @@ const Title = styled.h1`
   width: 80%;
   // margin-top: 3rem;
 
+  `}
+
+  ${media.between("smScreen", "mdScreen")`
+  font-size: 3.5rem;
+  width: 100%;
+  margin-left: 3rem;;
+  justify-content: flex-start;
   `}
 `;
 

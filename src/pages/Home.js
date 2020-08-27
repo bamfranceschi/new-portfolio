@@ -10,7 +10,7 @@ const ParentDiv = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 1600px;
+  max-width: 1400px;
   margin: 0 auto;
 
   ${media.between("smMobile", "tablet")`
@@ -25,7 +25,6 @@ const ParentDiv = styled.div`
 
   ${media.between("smScreen", "mdScreen")`
   width: 64rem;
-  border: 1px solid green;
   `}
 `;
 
@@ -42,7 +41,7 @@ const ContentDiv = styled.div`
 
   ${media.between("tablet", "smScreen")`
   flex-direction: column-reverse;
-  width: 64rem;
+  width: 80rem;
   `}
 `;
 

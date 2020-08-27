@@ -9,6 +9,7 @@ const HeaderCont = styled.div`
   justify-content: space-between;
   margin-left: 2rem;
   margin-right: 2rem;
+  margin-top: 2rem;
 
   ${media.between("smMobile", "tablet")`
     flex-direction: column-reverse
@@ -16,7 +17,7 @@ const HeaderCont = styled.div`
     width: 100%;
   `}
 
-  ${media.between("tablet", "smScreen")`
+  ${media.between("tablet", "mdScreen")`
     margin-left: 0;
     margin-right: 0;
     width: 100%;
@@ -25,11 +26,11 @@ const HeaderCont = styled.div`
 
 const HeaderImg = styled.img`
   border-radius: 15%;
-  width: 30rem;
-  height: 30rem;
+  width: 25rem;
+  height: 25rem;
   display: flex;
   align-self: center;
-  margin-right: 10rem;
+  margin-right: 4rem;
 
   ${media.between("smMobile", "tablet")`
     margin-right: 0rem;
@@ -37,10 +38,10 @@ const HeaderImg = styled.img`
     height: 20rem;
   `}
 
-  ${media.between("tablet", "smScreen")`
-    margin-right: 5rem;
-    width: 25rem;
-    height: 25rem;
+  ${media.between("tablet", "mdScreen")`
+    margin-right: 4rem;
+    width: 23rem;
+    height: 23rem;
   `}
 `;
 
@@ -60,16 +61,16 @@ const HeaderInfo = styled.div`
 `;
 
 const HeaderName = styled.h1`
-  font-size: 5rem;
+  font-size: 3.8rem;
   color: midnightblue;
 
   ${media.between("smMobile", "smScreen")`
   font-size: 3.5rem;
   `}
 
-//   ${media.between("tablet", "smScreen")`
-//   font-size: 3.5rem;
-// `}
+  ${media.between("smScreen", "mdScreen")`
+  font-size: 3.5rem;
+`}
 `;
 
 const HeaderSub = styled.div`
@@ -80,9 +81,9 @@ const HeaderSub = styled.div`
   font-size: 2.5rem;
   `}
 
-//   ${media.between("tablet", "smScreen")`
-//   font-size: 2.5rem;
-// `}
+  ${media.between("smScreen", "mdScreen")`
+  font-size: 2.8rem;
+`}
 `;
 
 const AInfoTag = styled.a`
@@ -106,14 +107,14 @@ const EmailATag = styled.a`
 
 const NumberATag = styled.a`
   font-size: 1.8rem;
-  width: 38%;
+  width: 70%;
   color: midnightblue;
 
   ${media.between("smMobile", "tablet")`
   width: 100%;
   `}
 
-  ${media.between("tablet", "smScreen")`
+  ${media.between("tablet", "lgScreen")`
   width: 100%;
 `}
 `;
@@ -140,14 +141,14 @@ const ContactInfoSub = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  width: 60%;
+  width: 80%;
   height: 45px;
 
   ${media.between("smMobile", "tablet")`
   width: 100%
   `}
 
-  ${media.between("tablet", "smScreen")`
+  ${media.between("tablet", "lgScreen")`
   width: 80%
   `}
 `;
@@ -158,7 +159,7 @@ const Header = () => {
       <HeaderInfo>
         <HeaderName>Anna Franceschi</HeaderName>
         <HeaderSub>
-          <h4 style={{ color: "dimgray" }}>Full Stack Web Developer</h4>
+          <h5 style={{ color: "dimgray" }}>Full Stack Web Developer</h5>
           <h5 style={{ color: "dimgray" }}>Austin, Tx</h5>
           <ContactInfo>
             <EmailATag href="mailto:anna.franceschi@gmail.com">

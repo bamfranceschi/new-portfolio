@@ -17,6 +17,11 @@ const Action = styled.li`
   // border: 1px solid green;
   margin-left: 4rem;
   `}
+
+  // ${media.between("smScreen", "mdScreen")`
+  // width: 87%;
+  // border: 1px solid red;
+  // `}
 `;
 
 const ProjAction = (props) => {

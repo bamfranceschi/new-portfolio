@@ -87,6 +87,11 @@ const HeadLine = styled.div`
   justify-content: center;
   width: 100%;
   `}
+
+  ${media.between("smScreen", "mdScreen")`
+  justify-content: flex-start;
+  width: 100%;
+  `}
 `;
 
 const ProjectName = styled.h1`
@@ -94,7 +99,7 @@ const ProjectName = styled.h1`
   margin-top: 1.5rem;
   margin-left: 2rem;
 
-  ${media.between("smMobile", "smScreen")`
+  ${media.between("smMobile", "mdScreen")`
   font-size: 2.3rem;
   margin-left: 1rem;
   `}
@@ -108,6 +113,12 @@ const TechStack = styled.h3`
   font-size: 1.5rem;
   text-align: center;
   `}
+`;
+
+const CardUl = styled.ul`
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
 `;
 
 const ProjCard = (props) => {
@@ -132,11 +143,11 @@ const ProjCard = (props) => {
           </a>
         </LinksCont>
         <ProjDesc>{props.description}</ProjDesc>
-        <ul>
+        <CardUl>
           {props.actions.map((a, idx) => (
             <ProjectAction key={idx} a={a} />
           ))}
-        </ul>
+        </CardUl>
         <BottomLine></BottomLine>
       </ProjInfo>
     </CardCont>

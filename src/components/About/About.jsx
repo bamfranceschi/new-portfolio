@@ -12,7 +12,7 @@ import media from "../../media";
 
 const AboutCont = styled.div`
   width: 40%;
-  margin-left: 4rem;
+  margin-left: 2rem;
   margin-right: 2rem;
   display: flex;
   flex-direction: column;
@@ -29,6 +29,10 @@ const AboutCont = styled.div`
   margin-right: 0;
   align-self: center;
   `}
+
+  // ${media.between("smScreen", "mdScreen")`
+  // width: 35%;
+  // `}
 `;
 
 const AboutTitle = styled.h1`
@@ -54,13 +58,20 @@ const AboutTitle = styled.h1`
   align-self: center;
   margin-left: 0;
   `}
+
+  ${media.between("smScreen", "mdScreen")`
+  font-size: 3.5rem;
+  width: 100%;
+  margin-left: 0;
+  `}
 `;
 
 const AboutHeader = styled.div`
   align-self: center;
-  margin-top: 6rem;
+  margin-top: 3rem;
   margin-left: 2rem;
   font-size: 1.2rem;
+  width: 100%;
 
   ${media.between("smMobile", "smScreen")`
   margin-top: 0rem;
@@ -71,7 +82,7 @@ const AboutHeader = styled.div`
 
 const AboutContent = styled.div`
   margin-top: 4rem;
-  margin-left: 1.5rem;
+  // margin-left: 1.5rem;
 
   ${media.between("smMobile", "smScreen")`
   margin-left: 0;
