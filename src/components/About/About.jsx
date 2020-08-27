@@ -8,11 +8,20 @@ import XPText from "./XP";
 import SkillsText from "./Skills";
 import HobbiesText from "./Hobbies";
 import Education from "./Education";
+import media from "../../media";
 
 const AboutCont = styled.div`
   width: 40%;
   margin-left: 4rem;
   margin-right: 2rem;
+  display: flex;
+  flex-direction: column;
+
+  ${media.between("smMobile", "lgMobile")`
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  `}
 `;
 
 const AboutTitle = styled.h1`
@@ -23,21 +32,39 @@ const AboutTitle = styled.h1`
   color: midnightblue;
   border-bottom: 1.5px solid lightgrey;
   width: 22%;
+
+  ${media.between("smMobile", "lgMobile")`
+  font-size: 4rem;
+  width: 80%;
+  justify-content: center;
+  align-self: center;
+  margin-left: 0;
+  `}
 `;
 
 const AboutHeader = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-evenly;
+  align-self: center;
   margin-top: 6rem;
   margin-left: 2rem;
   font-size: 1.2rem;
+
+  ${media.between("smMobile", "lgMobile")`
+  margin-top: 2rem;
+  margin-left: 0;
+  width: 80%;
+  `}
 `;
 
 const AboutContent = styled.div`
   margin-top: 4rem;
   margin-left: 1.5rem;
+
+  ${media.between("smMobile", "lgMobile")`
+  margin-left: 0;
+  width: 80%;
+  align-self: center;
+  margin-bottom: 5rem;
+  `}
 `;
 
 const { Panel } = Collapse;

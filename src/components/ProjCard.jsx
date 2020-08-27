@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import ProjectAction from "../components/ProjAction";
+import media from "../media";
 
 const CardCont = styled.div`
   display: flex;
@@ -13,6 +14,10 @@ const ProjInfo = styled.div`
   margin-left: 3rem;
   margin-right: 3rem;
   margin-top: 1rem;
+
+  ${media.between("smMobile", "lgMobile")`
+  align-items: center;
+  `}
 `;
 
 const ProjDesc = styled.p`
@@ -20,6 +25,10 @@ const ProjDesc = styled.p`
   margin-right: 2rem;
   width: 90%;
   margin-top: 0.5rem;
+
+  ${media.between("smMobile", "lgMobile")`
+  margin-right: 0rem;
+  `}
 `;
 
 const InfoBar = styled.h6`
@@ -35,24 +44,61 @@ const LinksCont = styled.div`
   justify-content: space-between;
   width: 250px;
   font-size: 1.3rem;
+
+  ${media.between("smMobile", "lgMobile")`
+  font-size: 1.4rem;
+
+  `}
 `;
 
 const BottomLine = styled.div`
   border-bottom: 1.5px solid lightgrey;
-  width: 80%;
-  margin-top: 1rem;
+  width: 85%;
+  margin-top: 1.5rem;
 `;
 
 const Logo = styled.img`
   width: 70px
   height: 70px
+
+  ${media.between("smMobile", "lgMobile")`
+  width: 50px
+  height: 50px
+  margin-top: 1rem;
+  `}
 `;
 
 const HeadLine = styled.div`
   display: flex;
-  // border: 1px solid red;
   align-items: center;
   width: 85%;
+
+  ${media.between("smMobile", "lgMobile")`
+  // border: 1px solid red;
+  justify-content: center;
+  width: 100%;
+  `}
+`;
+
+const ProjectName = styled.h1`
+  color: midnightblue;
+  margin-top: 1.5rem;
+  margin-left: 2rem;
+
+  ${media.between("smMobile", "lgMobile")`
+  font-size: 2.3rem;
+  margin-left: 1rem;
+  `}
+`;
+
+const TechStack = styled.h3`
+  color: dimgrey;
+  font-size: 1.3rem;
+
+  ${media.between("smMobile", "lgMobile")`
+  font-size: 1.5rem;
+  text-align: center;
+  `}
 `;
 
 const ProjCard = (props) => {
@@ -64,19 +110,9 @@ const ProjCard = (props) => {
             alt={"project logo"}
             src={require(`../images/${props.logo}`)}
           ></Logo>
-          <h1
-            style={{
-              color: "midnightblue",
-              marginTop: "1.5rem",
-              marginLeft: "2rem",
-            }}
-          >
-            {props.name}
-          </h1>
+          <ProjectName>{props.name}</ProjectName>
         </HeadLine>
-        <h3
-          style={{ color: "dimgrey", fontSize: "1.3rem" }}
-        >{`${props.tech}`}</h3>
+        <TechStack>{`${props.tech}`}</TechStack>
         <LinksCont>
           <a href={props.github} target="_" style={{ color: "dimgrey" }}>
             Github

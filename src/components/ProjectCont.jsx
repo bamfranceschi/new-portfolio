@@ -2,6 +2,7 @@ import React from "react";
 import ProjCard from "./ProjCard";
 import ProjectData from "../data/projects.json";
 import styled from "styled-components";
+import media from "../media";
 
 const ProjParent = styled.div`
   display: flex;
@@ -9,6 +10,10 @@ const ProjParent = styled.div`
   justify-content: center;
   width: 53%;
   color: midnightblue;
+
+  ${media.between("smMobile", "lgMobile")`
+  width: 100%
+  `}
 `;
 
 const Title = styled.h1`
@@ -18,6 +23,12 @@ const Title = styled.h1`
   color: midnightblue;
   border-bottom: 1.5px solid lightgrey;
   width: 26%;
+
+  ${media.between("smMobile", "lgMobile")`
+  font-size: 3.5rem;
+  justify-content: center;
+  width: 80%;
+  `}
 `;
 
 const ProjectCont = () => {

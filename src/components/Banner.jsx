@@ -7,7 +7,7 @@ import { DiPostgresql } from "react-icons/di";
 import { DiReact } from "react-icons/di";
 import { DiHtml5 } from "react-icons/di";
 import { DiSass } from "react-icons/di";
-import { DiCss3Full } from "react-icons/di";
+import media from "../media";
 
 const BannerCont = styled.div`
   display: flex;
@@ -17,6 +17,10 @@ const BannerCont = styled.div`
   margin-bottom: 3rem;
   margin-left: 3rem;
   margin-right: 10rem;
+
+  ${media.between("smMobile", "lgMobile")`
+  display: none;
+  `}
 `;
 
 const Banner = () => {
