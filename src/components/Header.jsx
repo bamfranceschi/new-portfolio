@@ -10,11 +10,16 @@ const HeaderCont = styled.div`
   margin-left: 2rem;
   margin-right: 2rem;
 
-  ${media.between("smMobile", "lgMobile")`
+  ${media.between("smMobile", "tablet")`
     flex-direction: column-reverse
     justify-content: center;
     width: 100%;
-    // border: 1px solid red;
+  `}
+
+  ${media.between("tablet", "smScreen")`
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
   `}
 `;
 
@@ -26,10 +31,16 @@ const HeaderImg = styled.img`
   align-self: center;
   margin-right: 10rem;
 
-  ${media.between("smMobile", "lgMobile")`
+  ${media.between("smMobile", "tablet")`
     margin-right: 0rem;
     width: 20rem;
     height: 20rem;
+  `}
+
+  ${media.between("tablet", "smScreen")`
+    margin-right: 5rem;
+    width: 25rem;
+    height: 25rem;
   `}
 `;
 
@@ -38,28 +49,40 @@ const HeaderInfo = styled.div`
   flex-direction: column;
   margin: 4rem;
 
-  ${media.between("smMobile", "lgMobile")`
+  ${media.between("smMobile", "tablet")`
   align-items: center;
   text-align: center;
   `}
+
+  ${media.between("tablet", "smScreen")`
+  margin-top: 5rem;
+`}
 `;
 
 const HeaderName = styled.h1`
   font-size: 5rem;
   color: midnightblue;
 
-  ${media.between("smMobile", "lgMobile")`
+  ${media.between("smMobile", "smScreen")`
   font-size: 3.5rem;
   `}
+
+//   ${media.between("tablet", "smScreen")`
+//   font-size: 3.5rem;
+// `}
 `;
 
 const HeaderSub = styled.div`
   font-size: 3rem;
   color: midnightblue;
 
-  ${media.between("smMobile", "lgMobile")`
+  ${media.between("smMobile", "smScreen")`
   font-size: 2.5rem;
   `}
+
+//   ${media.between("tablet", "smScreen")`
+//   font-size: 2.5rem;
+// `}
 `;
 
 const AInfoTag = styled.a`
@@ -72,9 +95,13 @@ const EmailATag = styled.a`
   width: 61%;
   color: midnightblue;
 
-  ${media.between("smMobile", "lgMobile")`
-  width: 100%
+  ${media.between("smMobile", "tablet")`
+  width: 100%;
   `}
+
+  ${media.between("tablet", "smScreen")`
+  width: 100%;
+`}
 `;
 
 const NumberATag = styled.a`
@@ -82,16 +109,21 @@ const NumberATag = styled.a`
   width: 38%;
   color: midnightblue;
 
-  ${media.between("smMobile", "lgMobile")`
-  width: 100%
+  ${media.between("smMobile", "tablet")`
+  width: 100%;
   `}
+
+  ${media.between("tablet", "smScreen")`
+  width: 100%;
+`}
 `;
 
 const InfoBar = styled.h6`
   font-size: 1.8rem;
   color: midnightblue;
+  align-self: flex-start;
 
-  ${media.between("smMobile", "lgMobile")`
+  ${media.between("smMobile", "tablet")`
   display: flex;
   align-self: flex-start;
   `}
@@ -111,8 +143,12 @@ const ContactInfoSub = styled.div`
   width: 60%;
   height: 45px;
 
-  ${media.between("smMobile", "lgMobile")`
+  ${media.between("smMobile", "tablet")`
   width: 100%
+  `}
+
+  ${media.between("tablet", "smScreen")`
+  width: 80%
   `}
 `;
 

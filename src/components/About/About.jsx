@@ -17,10 +17,17 @@ const AboutCont = styled.div`
   display: flex;
   flex-direction: column;
 
-  ${media.between("smMobile", "lgMobile")`
+  ${media.between("smMobile", "tablet")`
   width: 100%;
   margin-left: 0;
   margin-right: 0;
+  `}
+
+  ${media.between("tablet", "smScreen")`
+  width: 92%;
+  margin-left: 0;
+  margin-right: 0;
+  align-self: center;
   `}
 `;
 
@@ -30,11 +37,18 @@ const AboutTitle = styled.h1`
   margin-top: 3rem;
   margin-left: 2rem;
   color: midnightblue;
-  border-bottom: 1.5px solid lightgrey;
   width: 22%;
 
-  ${media.between("smMobile", "lgMobile")`
+  ${media.between("smMobile", "tablet")`
   font-size: 4rem;
+  width: 80%;
+  justify-content: center;
+  align-self: center;
+  margin-left: 0;
+  `}
+
+  ${media.between("tablet", "smScreen")`
+  font-size: 3.5rem;
   width: 80%;
   justify-content: center;
   align-self: center;
@@ -48,10 +62,10 @@ const AboutHeader = styled.div`
   margin-left: 2rem;
   font-size: 1.2rem;
 
-  ${media.between("smMobile", "lgMobile")`
-  margin-top: 2rem;
+  ${media.between("smMobile", "smScreen")`
+  margin-top: 0rem;
   margin-left: 0;
-  width: 80%;
+  width: 82%;
   `}
 `;
 
@@ -59,11 +73,12 @@ const AboutContent = styled.div`
   margin-top: 4rem;
   margin-left: 1.5rem;
 
-  ${media.between("smMobile", "lgMobile")`
+  ${media.between("smMobile", "smScreen")`
   margin-left: 0;
   width: 80%;
   align-self: center;
   margin-bottom: 5rem;
+  margin-right: 1.5rem;
   `}
 `;
 

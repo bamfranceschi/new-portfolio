@@ -15,7 +15,7 @@ const ProjInfo = styled.div`
   margin-right: 3rem;
   margin-top: 1rem;
 
-  ${media.between("smMobile", "lgMobile")`
+  ${media.between("smMobile", "smScreen")`
   align-items: center;
   `}
 `;
@@ -26,8 +26,12 @@ const ProjDesc = styled.p`
   width: 90%;
   margin-top: 0.5rem;
 
-  ${media.between("smMobile", "lgMobile")`
+  ${media.between("smMobile", "smScreen")`
   margin-right: 0rem;
+  // border: 1px solid red;
+  // text-align: center;
+  justify-content: center;
+  width: 83%;
   `}
 `;
 
@@ -45,7 +49,7 @@ const LinksCont = styled.div`
   width: 250px;
   font-size: 1.3rem;
 
-  ${media.between("smMobile", "lgMobile")`
+  ${media.between("smMobile", "tablet")`
   font-size: 1.4rem;
 
   `}
@@ -61,9 +65,15 @@ const Logo = styled.img`
   width: 70px
   height: 70px
 
-  ${media.between("smMobile", "lgMobile")`
+  ${media.between("smMobile", "tablet")`
   width: 50px
   height: 50px
+  margin-top: 1rem;
+  `}
+
+  ${media.between("tablet", "smScreen")`
+  width: 55px
+  height: 55px
   margin-top: 1rem;
   `}
 `;
@@ -73,8 +83,7 @@ const HeadLine = styled.div`
   align-items: center;
   width: 85%;
 
-  ${media.between("smMobile", "lgMobile")`
-  // border: 1px solid red;
+  ${media.between("smMobile", "smScreen")`
   justify-content: center;
   width: 100%;
   `}
@@ -85,7 +94,7 @@ const ProjectName = styled.h1`
   margin-top: 1.5rem;
   margin-left: 2rem;
 
-  ${media.between("smMobile", "lgMobile")`
+  ${media.between("smMobile", "smScreen")`
   font-size: 2.3rem;
   margin-left: 1rem;
   `}
@@ -95,7 +104,7 @@ const TechStack = styled.h3`
   color: dimgrey;
   font-size: 1.3rem;
 
-  ${media.between("smMobile", "lgMobile")`
+  ${media.between("smMobile", "smScreen")`
   font-size: 1.5rem;
   text-align: center;
   `}

@@ -11,7 +11,7 @@ const ProjParent = styled.div`
   width: 53%;
   color: midnightblue;
 
-  ${media.between("smMobile", "lgMobile")`
+  ${media.between("smMobile", "smScreen")`
   width: 100%
   `}
 `;
@@ -19,15 +19,18 @@ const ProjParent = styled.div`
 const Title = styled.h1`
   font-size: 4rem;
   display: flex;
-  margin: 3rem;
+  margin-top: 3rem;
   color: midnightblue;
-  border-bottom: 1.5px solid lightgrey;
+  // border-bottom: 1.5px solid lightgrey;
   width: 26%;
 
-  ${media.between("smMobile", "lgMobile")`
+  ${media.between("smMobile", "smScreen")`
   font-size: 3.5rem;
   justify-content: center;
+  align-self: center;
   width: 80%;
+  // margin-top: 3rem;
+
   `}
 `;
 

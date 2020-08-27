@@ -18,8 +18,14 @@ const BannerCont = styled.div`
   margin-left: 3rem;
   margin-right: 10rem;
 
-  ${media.between("smMobile", "lgMobile")`
+  ${media.between("smMobile", "tablet")`
   display: none;
+  `}
+
+  ${media.between("tablet", "smScreen")`
+  width: 90%
+  margin: 0;
+  align-self: center;
   `}
 `;
 
