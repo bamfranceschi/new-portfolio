@@ -19,7 +19,7 @@ const XPText = (
     Circle of Health International, as the Chief Development Officer. The
     organization specializes in securing and supporting maternal and newborn
     healthcare initiatives in crisis settings, such as natural disasters and
-    conflict zones.
+    conflict zones."
   </p>
 );
 
