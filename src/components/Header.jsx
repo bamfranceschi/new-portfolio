@@ -11,16 +11,19 @@ const HeaderCont = styled.div`
   margin-right: 2rem;
   margin-top: 2rem;
 
-  ${media.between("smMobile", "tablet")`
+  ${media.between("smMobile", "smScreen")`
+    display: flex;
     flex-direction: column-reverse
     justify-content: center;
-    width: 100%;
-  `}
-
-  ${media.between("tablet", "mdScreen")`
     margin-left: 0;
     margin-right: 0;
-    width: 100%;
+    width: 90vw;
+  `}
+
+  ${media.between("smScreen", "mdScreen")`
+    margin-left: 0;
+    margin-right: 0;
+    width: 90vw;
   `}
 `;
 
@@ -32,13 +35,13 @@ const HeaderImg = styled.img`
   align-self: center;
   margin-right: 4rem;
 
-  ${media.between("smMobile", "tablet")`
+  ${media.between("smMobile", "smScreen")`
     margin-right: 0rem;
     width: 20rem;
     height: 20rem;
   `}
 
-  ${media.between("tablet", "mdScreen")`
+  ${media.between("smScreen", "mdScreen")`
     margin-right: 4rem;
     width: 23rem;
     height: 23rem;
@@ -50,14 +53,14 @@ const HeaderInfo = styled.div`
   flex-direction: column;
   margin: 4rem;
 
-  ${media.between("smMobile", "tablet")`
+  ${media.between("smMobile", "smScreen")`
   align-items: center;
   text-align: center;
   `}
 
-  ${media.between("tablet", "smScreen")`
-  margin-top: 5rem;
-`}
+//   ${media.greaterThan("smScreen")`
+//   margin-top: 5rem;
+// `}
 `;
 
 const HeaderName = styled.h1`
@@ -144,11 +147,11 @@ const ContactInfoSub = styled.div`
   width: 80%;
   height: 45px;
 
-  ${media.between("smMobile", "tablet")`
+  ${media.between("smMobile", "smScreen")`
   width: 100%
   `}
 
-  ${media.between("tablet", "lgScreen")`
+  ${media.between("smScreen", "lgScreen")`
   width: 80%
   `}
 `;

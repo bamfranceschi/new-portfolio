@@ -27,21 +27,19 @@ const Title = styled.h1`
   margin-top: 3rem;
   color: midnightblue;
   // border-bottom: 1.5px solid lightgrey;
-  width: 26%;
+  width: 80%;
+  margin-left: 3rem;
 
   ${media.between("smMobile", "smScreen")`
   font-size: 3.5rem;
   justify-content: center;
   align-self: center;
   width: 80%;
-  // margin-top: 3rem;
-
   `}
 
   ${media.between("smScreen", "mdScreen")`
   font-size: 3.5rem;
   width: 100%;
-  margin-left: 3rem;;
   justify-content: flex-start;
   `}
 `;

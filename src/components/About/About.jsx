@@ -39,7 +39,7 @@ const AboutTitle = styled.h1`
   font-size: 4rem;
   display: flex;
   margin-top: 3rem;
-  margin-left: 2rem;
+  margin-left: 1rem;
   color: midnightblue;
   width: 22%;
 
@@ -51,18 +51,10 @@ const AboutTitle = styled.h1`
   margin-left: 0;
   `}
 
-  ${media.between("tablet", "smScreen")`
-  font-size: 3.5rem;
-  width: 80%;
-  justify-content: center;
-  align-self: center;
-  margin-left: 0;
-  `}
-
-  ${media.between("smScreen", "mdScreen")`
+  ${media.between("tablet", "mdScreen")`
   font-size: 3.5rem;
   width: 100%;
-  margin-left: 0;
+  margin-left: 1rem;;
   `}
 `;
 

@@ -20,7 +20,7 @@ const ParentDiv = styled.div`
   `}
 
   ${media.between("tablet", "smScreen")`
-  width: 64rem;
+  width: 90vw;
   `}
 
   ${media.between("smScreen", "mdScreen")`
@@ -41,7 +41,7 @@ const ContentDiv = styled.div`
 
   ${media.between("tablet", "smScreen")`
   flex-direction: column-reverse;
-  width: 80rem;
+  width: 90vw;
   `}
 `;
 
