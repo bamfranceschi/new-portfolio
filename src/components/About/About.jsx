@@ -12,7 +12,7 @@ import media from "../../media";
 
 const AboutCont = styled.div`
   width: 40%;
-  margin-left: 2rem;
+  margin-left: 5rem;
   margin-right: 2rem;
   display: flex;
   flex-direction: column;
@@ -43,7 +43,7 @@ const AboutTitle = styled.h1`
   color: midnightblue;
   width: 22%;
 
-  ${media.between("smMobile", "tablet")`
+  ${media.between("smMobile", "smScreen")`
   font-size: 4rem;
   width: 80%;
   justify-content: center;
@@ -51,7 +51,7 @@ const AboutTitle = styled.h1`
   margin-left: 0;
   `}
 
-  ${media.between("tablet", "mdScreen")`
+  ${media.between("smScreen", "mdScreen")`
   font-size: 3.5rem;
   width: 100%;
   margin-left: 1rem;;
@@ -113,7 +113,8 @@ const About = () => {
   const [state, setState] = useState([
     {
       short: "TLDR:",
-      long: "TLDR: Lorem impsum blah blah blah blah blah blah..",
+      long:
+        'TLDR: "Passion-driven webdev who loves building (socially) impactful and beautiful products, enjoys continually learning new technologies, spoken languages and artforms, and appreciates a satisfying hike or martial arts sparring match.',
       selected: false,
       text: TLDRText,
     },
@@ -126,7 +127,8 @@ const About = () => {
     },
     {
       short: "Experience:",
-      long: "Experience: lorem ipsum blah blah blah blah blah blah blah...",
+      long:
+        "Experience: \"Most recently, I've had the opportunity to intern with Connect Our Kids as a volunteer Team Lead...",
       selected: false,
       text: XPText,
     },

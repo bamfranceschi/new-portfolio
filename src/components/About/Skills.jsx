@@ -2,6 +2,8 @@ import React from "react";
 
 const SkillsText = (
   <p style={{ paddingLeft: 24, fontSize: "1.3rem", color: "midnightblue" }}>
+    [
+    <br />
     "JavaScript",
     <br /> "Python",
     <br /> "TypeScript",
