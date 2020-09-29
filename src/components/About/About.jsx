@@ -85,28 +85,27 @@ const AboutContent = styled.div`
   `}
 `;
 
+const ShortP = styled.p`
+  font-size: 1.7rem;
+  margin-bottom: 0;
+`;
+
+const LongP = styled.p`
+  font-size: 1.7rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-bottom: 0;
+`;
+
 const { Panel } = Collapse;
 
-console.log(window);
-
 const Header = (props) => {
-  console.log(props);
   if (props.selected) {
-    return <p style={{ fontSize: "1.7rem" }}>{props.short}</p>;
+    return <ShortP>{props.short}</ShortP>;
   }
 
-  return (
-    <p
-      style={{
-        fontSize: "1.7rem",
-        overflow: "hidden",
-        textOverflow: "ellipsis",
-        whiteSpace: "nowrap",
-      }}
-    >
-      {props.long}
-    </p>
-  );
+  return <LongP>{props.long}</LongP>;
 };
 
 const About = () => {

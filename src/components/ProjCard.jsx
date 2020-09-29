@@ -121,6 +121,12 @@ const CardUl = styled.ul`
   flex-direction: column;
 `;
 
+const Link = styled.a`
+  &:hover {
+    color: #0076ff !important;
+  }
+`;
+
 const ProjCard = (props) => {
   return (
     <CardCont>
@@ -134,13 +140,13 @@ const ProjCard = (props) => {
         </HeadLine>
         <TechStack>{`${props.tech}`}</TechStack>
         <LinksCont>
-          <a href={props.github} target="_" style={{ color: "dimgrey" }}>
+          <Link href={props.github} target="_" style={{ color: "dimgrey" }}>
             Github
-          </a>
+          </Link>
           <InfoBar>|</InfoBar>
-          <a href={props.deploy} target="_" style={{ color: "dimgrey" }}>
+          <Link href={props.deploy} target="_" style={{ color: "dimgrey" }}>
             Deployed App
-          </a>
+          </Link>
         </LinksCont>
         <ProjDesc>{props.description}</ProjDesc>
         <CardUl>

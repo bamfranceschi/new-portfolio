@@ -98,6 +98,7 @@ const EmailATag = styled.a`
   font-size: 1.8rem;
   width: 61%;
   color: midnightblue;
+  text-decoration: none;
 
   ${media.between("smMobile", "tablet")`
   width: 100%;
@@ -112,6 +113,7 @@ const NumberATag = styled.a`
   font-size: 1.8rem;
   width: 70%;
   color: midnightblue;
+  text-decoration: none;
 
   ${media.between("smMobile", "tablet")`
   width: 100%;
@@ -137,6 +139,7 @@ const ContactInfo = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 3rem;
+  text-decoration: none;
 `;
 
 const ContactInfoSub = styled.div`
